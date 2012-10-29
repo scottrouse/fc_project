@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fire Center Project feature.
+ */
+
+include_once 'fc_project.features.inc';
