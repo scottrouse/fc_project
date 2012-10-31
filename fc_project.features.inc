@@ -22,7 +22,7 @@ function fc_project_node_info() {
     'project' => array(
       'name' => t('Project'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Each <em>Project</em> describes a single NCLFA Project.'),
       'has_title' => '1',
       'title_label' => t('Project Name'),
       'help' => '',
