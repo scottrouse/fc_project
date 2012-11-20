@@ -466,7 +466,9 @@ function fc_project_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_with_summary',
     ),
@@ -495,7 +497,7 @@ function fc_project_field_default_fields() {
       'label' => 'Project Details',
       'required' => 1,
       'settings' => array(
-        'display_summary' => 0,
+        'display_summary' => 1,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
