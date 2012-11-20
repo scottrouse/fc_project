@@ -10,6 +10,68 @@
 function fc_project_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'comment-comment_node_project-comment_body'.
+  $fields['comment-comment_node_project-comment_body'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(
+        0 => 'comment',
+      ),
+      'field_name' => 'comment_body',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'comment_node_project',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'comment',
+      'field_name' => 'comment_body',
+      'label' => 'Comment',
+      'required' => TRUE,
+      'settings' => array(
+        'text_processing' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'text',
+        'settings' => array(
+          'rows' => 5,
+        ),
+        'type' => 'text_textarea',
+        'weight' => 0,
+      ),
+    ),
+  );
+
   // Exported field: 'node-project-field_attachments'.
   $fields['node-project-field_attachments'] = array(
     'field_config' => array(
@@ -78,7 +140,7 @@ function fc_project_field_default_fields() {
           'progress_indicator' => 'bar',
         ),
         'type' => 'file_generic',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -158,7 +220,7 @@ function fc_project_field_default_fields() {
           'progress_indicator' => 'bar',
         ),
         'type' => 'image_image',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -239,11 +301,11 @@ function fc_project_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_principal_investigator',
       'foreign keys' => array(
-        'node' => array(
+        'users' => array(
           'columns' => array(
-            'target_id' => 'nid',
+            'target_id' => 'uid',
           ),
-          'table' => 'node',
+          'table' => 'users',
         ),
       ),
       'indexes' => array(
@@ -305,6 +367,78 @@ function fc_project_field_default_fields() {
         ),
         'type' => 'options_select',
         'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-project-field_project_category'.
+  $fields['node-project-field_project_category'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_project_category',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'project_category',
+            'parent' => '0',
+          ),
+        ),
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'project',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '<p>Choose the <strong>Project Category</strong> for this <em>Project</em>.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 8,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_project_category',
+      'label' => 'Project Category',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '1',
       ),
     ),
   );
@@ -373,7 +507,7 @@ function fc_project_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -387,11 +521,11 @@ function fc_project_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_project_staff',
       'foreign keys' => array(
-        'node' => array(
+        'users' => array(
           'columns' => array(
-            'target_id' => 'nid',
+            'target_id' => 'uid',
           ),
-          'table' => 'node',
+          'table' => 'users',
         ),
       ),
       'indexes' => array(
@@ -459,12 +593,15 @@ function fc_project_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<p>Choose the <strong>Project Category</strong> for this <em>Project</em>.');
   t('<p>If you\'d like to add additional information regarding Investigators, Staff, or Parters on this <em>Project</em>, you may do so in this field.</p>');
   t('<p>Upload an image to serve as the <strong>Featured Image</strong> for this <em>Project</em>.</p>');
   t('Additional Partner Notes');
   t('Attachments');
+  t('Comment');
   t('Featured Image');
   t('Principal Investigator');
+  t('Project Category');
   t('Project Details');
   t('Project Staff');
 

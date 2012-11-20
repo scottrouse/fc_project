@@ -21,11 +21,11 @@ function fc_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Staff and Partners',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
-      0 => 'field_principal_investigator',
-      1 => 'field_project_staff',
-      2 => 'field_partner_notes',
+      0 => 'field_partner_notes',
+      1 => 'field_principal_investigator',
+      2 => 'field_project_staff',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
