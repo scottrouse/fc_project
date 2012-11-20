@@ -98,6 +98,7 @@ function fc_project_field_default_fields() {
       'settings' => array(
         'display_default' => 0,
         'display_field' => 0,
+        'profile2_private' => FALSE,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -106,7 +107,7 @@ function fc_project_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'project',
       'deleted' => '0',
-      'description' => '',
+      'description' => '<p>You may upload PDF files as <strong>Attachments</strong> to this <em>Project</em>.</p>',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -129,7 +130,7 @@ function fc_project_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => 'project/attachments',
-        'file_extensions' => 'txt',
+        'file_extensions' => 'pdf',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
@@ -598,6 +599,7 @@ function fc_project_field_default_fields() {
   t('<p>Choose the <strong>Project Category</strong> for this <em>Project</em>.');
   t('<p>If you\'d like to add additional information regarding Investigators, Staff, or Parters on this <em>Project</em>, you may do so in this field.</p>');
   t('<p>Upload an image to serve as the <strong>Featured Image</strong> for this <em>Project</em>.</p>');
+  t('<p>You may upload PDF files as <strong>Attachments</strong> to this <em>Project</em>.</p>');
   t('Additional Partner Notes');
   t('Attachments');
   t('Comment');
