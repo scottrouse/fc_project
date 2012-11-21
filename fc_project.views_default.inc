@@ -99,8 +99,8 @@ function fc_project_views_default_views() {
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['block_description'] = 'Projects Page';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
+  /* Display: Projects Sorting Page */
+  $handler = $view->new_display('page', 'Projects Sorting Page', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Sort Projects';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
