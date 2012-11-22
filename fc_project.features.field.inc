@@ -356,18 +356,12 @@ function fc_project_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
-        'handler' => 'views',
+        'handler' => 'base',
         'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
+          'sort' => array(
+            'type' => 'none',
           ),
-          'view' => array(
-            'args' => array(),
-            'display_name' => 'entityreference_3',
-            'view_name' => 'user_reference',
-          ),
+          'target_bundles' => array(),
         ),
         'profile2_private' => FALSE,
         'target_type' => 'user',
@@ -407,7 +401,11 @@ function fc_project_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
         'type' => 'options_select',
         'weight' => '5',
       ),
@@ -581,18 +579,12 @@ function fc_project_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
-        'handler' => 'views',
+        'handler' => 'base',
         'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
+          'sort' => array(
+            'type' => 'none',
           ),
-          'view' => array(
-            'args' => array(),
-            'display_name' => 'entityreference_3',
-            'view_name' => 'user_reference',
-          ),
+          'target_bundles' => array(),
         ),
         'profile2_private' => FALSE,
         'target_type' => 'user',
@@ -632,7 +624,11 @@ function fc_project_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
         'type' => 'options_select',
         'weight' => '6',
       ),
