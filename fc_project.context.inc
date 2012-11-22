@@ -15,7 +15,7 @@ function fc_project_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'projects';
   $context->description = 'Defines block layout on Projects page.';
-  $context->tag = '';
+  $context->tag = 'Projects';
   $context->conditions = array(
     'path' => array(
       'values' => array(
@@ -46,6 +46,7 @@ function fc_project_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Defines block layout on Projects page.');
+  t('Projects');
   $export['projects'] = $context;
 
   return $export;
