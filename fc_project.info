@@ -61,3 +61,4 @@ features[variable][] = rh_node_redirect_project
 features[variable][] = rh_node_redirect_response_project
 features[variable][] = xmlsitemap_settings_node_project
 features[views_view][] = projects
+features[views_view][] = user_reference
